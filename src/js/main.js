@@ -21,9 +21,16 @@ const addButton = document.querySelector('.add--js');
 const removeButton = document.querySelector('.remove--js');
 const key = new Date().toISOString().slice(0, 10);
 
+if (localStorage.getItem(localStorage.key) = false) {
+  counter.innerHTML = 0;
+} else {
+  counter.innerHTML = localStorage.getItem(localStorage.key);
+}
+
 addButton.addEventListener('click', () => {
   if (counter.innerHTML < 9) {
     counter.innerHTML++
+    localStorage.setItem(key, counter.innerHTML);
   }
   else {
     alert('Osiągnąłeś dzienny limit szklanek');
@@ -33,6 +40,7 @@ addButton.addEventListener('click', () => {
 removeButton.addEventListener('click', () => {
   if (counter.innerHTML > 0) {
     counter.innerHTML--
+    localStorage.setItem(key, counter.innerHTML);
   }
   else {
     alert('Nie można usunąć więcej szklanek')
