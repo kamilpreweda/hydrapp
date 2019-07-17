@@ -22,8 +22,11 @@ const removeButton = document.querySelector('.remove--js');
 const key = new Date().toISOString().slice(0, 10);
 const korsan = document.querySelector('.korsan--js');
 const body = document.body;
+const matrioszka = document.createElement('img');
+matrioszka.src = 'assets/img/matrioszka512.svg'
+const glass = document.querySelector('img');
 
-if (localStorage.getItem(new Date().toISOString().slice(0, 10)) = false) {
+if (localStorage.getItem(new Date().toISOString().slice(0, 10)) == false) {
   counter.innerHTML = 0;
   localStorage.setItem(key, counter.innerHTML);
 } else {
@@ -51,6 +54,27 @@ removeButton.addEventListener('click', () => {
 })
 
 korsan.addEventListener('click', () => {
-  console.log('click');
-  body.classList.add('body--js');
+  body.classList.toggle('body--js');
+  addButton.classList.toggle('add__hidden');
+  removeButton.classList.toggle('remove__hidden');
+  counter.classList.toggle('counter__hidden');
+  glass.classList.toggle('glass__hidden');
+  if (korsan.innerHTML === 'Znajdź Korsana') {
+    korsan.innerHTML = 'Powrót'
+    korsan.style.opacity = 1;
+    korsan.style.background = 'black';
+    body.appendChild(matrioszka);
+    matrioszka.classList.add('matrioszka');
+  }
+  else if (korsan.innerHTML === 'Powrót') {
+    korsan.innerHTML = 'Znajdź Korsana'
+    korsan.style.opacity = .1;
+    korsan.style.background = '#3767AD';
+    body.removeChild(matrioszka);
+  }
+
+})
+
+matrioszka.addEventListener('click', () => {
+  
 })
