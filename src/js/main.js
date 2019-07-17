@@ -20,18 +20,12 @@ const counter = document.querySelector('.counter--js');
 const addButton = document.querySelector('.add--js');
 const removeButton = document.querySelector('.remove--js');
 const key = new Date().toISOString().slice(0, 10);
-const storage = {
-  key: key,
-  value: counter.innerHTML
-}
 
-console.log(counter);
-console.log(storage);
-
-if (localStorage.getItem(localStorage.key) = false) {
+if (localStorage.getItem(new Date().toISOString().slice(0, 10)) = false) {
   counter.innerHTML = 0;
+  localStorage.setItem(key, counter.innerHTML);
 } else {
-  counter.innerHTML = localStorage.getItem(localStorage.key);
+  counter.innerHTML = localStorage.getItem(new Date().toISOString().slice(0, 10));
 }
 
 addButton.addEventListener('click', () => {
