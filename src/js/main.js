@@ -20,6 +20,8 @@ const counter = document.querySelector('.counter--js');
 const addButton = document.querySelector('.add--js');
 const removeButton = document.querySelector('.remove--js');
 const key = new Date().toISOString().slice(0, 10);
+const korsan = document.querySelector('.korsan--js');
+const body = document.body;
 
 if (localStorage.getItem(new Date().toISOString().slice(0, 10)) = false) {
   counter.innerHTML = 0;
@@ -48,3 +50,7 @@ removeButton.addEventListener('click', () => {
   }
 })
 
+korsan.addEventListener('click', () => {
+  console.log('click');
+  body.classList.add('body--js');
+})
