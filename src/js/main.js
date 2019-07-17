@@ -20,6 +20,13 @@ const counter = document.querySelector('.counter--js');
 const addButton = document.querySelector('.add--js');
 const removeButton = document.querySelector('.remove--js');
 const key = new Date().toISOString().slice(0, 10);
+const storage = {
+  key: key,
+  value: counter.innerHTML
+}
+
+console.log(counter);
+console.log(storage);
 
 if (localStorage.getItem(localStorage.key) = false) {
   counter.innerHTML = 0;
