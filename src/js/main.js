@@ -1,10 +1,8 @@
 "use strict";
 
-import { NONAME } from "dns";
+// import { NONAME } from "dns";
 
 // service worker registration - remove if you're not going to use it
-
-console.log('hello');
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function () {
@@ -37,6 +35,7 @@ const matrioszka48 = document.querySelector('.matrioszka__48--js');
 const matrioszka32 = document.querySelector('.matrioszka__32--js');
 const matrioszka24 = document.querySelector('.matrioszka__24--js');
 const matrioszka16 = document.querySelector('.matrioszka__16--js');
+let matrioszki = [...document.querySelectorAll('.matrioszka')];
 
 if (localStorage.getItem(key) == false) {
   counter.innerHTML = '0';
@@ -76,22 +75,36 @@ korsan.addEventListener('click', () => {
     korsan.style.opacity = 1;
     korsan.style.background = 'black';
     body.appendChild(matrioszka);
+    matrioszka.style.display = 'block';
     matrioszka.classList.add('matrioszka');
     matrioszka.classList.add('matrioszka__512');
     matrioszka.classList.add('matrioszka__512--js');
-    // matrioszki.style.display = 'block';
+    for (let item of matrioszki) {
+      console.log(item);
+      item.style.display = 'block';
+    }
   }
   else if (korsan.innerHTML === 'Powrót') {
     korsan.innerHTML = 'Znajdź Korsana'
     korsan.style.opacity = .1;
     korsan.style.background = '#3767AD';
+    matrioszka.classList.remove('matrioszka__512--activated');
+    matrioszka128.classList.remove('matrioszka__128--activated');
+    matrioszka96.classList.remove('matrioszka__96--activated');
+    matrioszka72.classList.remove('matrioszka__72--activated');
+    matrioszka64.classList.remove('matrioszka__64--activated');
+    matrioszka48.classList.remove('matrioszka__48--activated');
+    matrioszka32.classList.remove('matrioszka__32--activated');
+    matrioszka24.classList.remove('matrioszka__24--activated');
+    matrioszka16.classList.remove('matrioszka__16--activated');
     body.removeChild(matrioszka);
-    // matrioszki.style.display = 'none';
+    for (let item of matrioszki) {
+      item.style.display = 'none';
+    }
   }
 })
 
 matrioszka.addEventListener('click', () => {
-  console.log('klik');
   matrioszka.classList.add('matrioszka__512--activated');
   matrioszka128.classList.add('matrioszka__128--activated');
   matrioszka96.classList.add('matrioszka__96--activated');

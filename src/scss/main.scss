@@ -158,7 +158,7 @@ body {
   animation: matrioszkaAnimation 2s infinite;
   cursor: pointer;
   position: absolute;
-  // display: none;
+  display: none;
 
 }
 
@@ -166,13 +166,42 @@ body {
   z-index: 9;
 }
 
+@keyframes matrioszka512 {
+  from {
+    transform: translate(0%, 0%);
+  }
+
+  to {
+    transform: translate(-150%, 50%);
+  }
+}
+
+.matrioszka__512--activated {
+  animation: matrioszka512 .3s linear forwards;
+}
+
 .matrioszka__128 {
   z-index: 8;
+}
+
+@keyframes matrioszka128 {
+  from {
+    transform: translate(0%, 0%);
+  }
+
+  to {
+    transform: translate(-150%, 50%);
+  }
+}
+
+.matrioszka__128--activated {
+  animation: matrioszka128 .3s linear forwards;
 }
 
 .matrioszka__96 {
   z-index: 7;
 }
+
 
 .matrioszka__72 {
   z-index: 6;
