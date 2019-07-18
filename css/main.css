@@ -342,6 +342,46 @@ template {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg); } }
 
+@-webkit-keyframes matrioszkaAnimation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  10% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg); }
+  20% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  30% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg); }
+  40% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); } }
+
+@keyframes matrioszkaAnimation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  10% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg); }
+  20% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  30% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg); }
+  40% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); } }
+
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -370,7 +410,10 @@ body {
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  -webkit-transition: 2s;
+  -o-transition: 2s;
+  transition: 2s; }
 
 .body--js {
   background: black; }
@@ -380,6 +423,8 @@ body {
   .glass:hover {
     -webkit-animation: glassAnimation .3s infinite;
             animation: glassAnimation .3s infinite; }
+  .glass__hidden {
+    display: none; }
 
 .counter {
   position: absolute;
@@ -387,6 +432,8 @@ body {
   -webkit-transform: translateY(-50.5px);
       -ms-transform: translateY(-50.5px);
           transform: translateY(-50.5px); }
+  .counter__hidden {
+    display: none; }
 
 .add {
   margin-top: 48px;
@@ -403,6 +450,8 @@ body {
   .add:hover {
     background: black;
     color: white; }
+  .add__hidden {
+    display: none; }
 
 .remove {
   margin-top: 38px;
@@ -419,6 +468,8 @@ body {
     -webkit-transform: scale(1.2);
         -ms-transform: scale(1.2);
             transform: scale(1.2); }
+  .remove__hidden {
+    display: none; }
 
 .korsan {
   position: fixed;
@@ -427,6 +478,42 @@ body {
   background-color: #3767AD;
   color: white;
   opacity: .1;
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-transition: 2s;
+  -o-transition: 2s;
+  transition: 2s; }
+
+.matrioszka {
+  -webkit-animation: matrioszkaAnimation 2s infinite;
+          animation: matrioszkaAnimation 2s infinite;
+  cursor: pointer;
+  position: absolute; }
+
+.matrioszka__512 {
+  z-index: 9; }
+
+.matrioszka__128 {
+  z-index: 8; }
+
+.matrioszka__96 {
+  z-index: 7; }
+
+.matrioszka__72 {
+  z-index: 6; }
+
+.matrioszka__64 {
+  z-index: 5; }
+
+.matrioszka__48 {
+  z-index: 4; }
+
+.matrioszka__32 {
+  z-index: 3; }
+
+.matrioszka__24 {
+  z-index: 1; }
+
+.matrioszka__16 {
+  z-index: 0; }
 
 /*# sourceMappingURL=main.css.map */
