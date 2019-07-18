@@ -487,13 +487,54 @@ body {
   -webkit-animation: matrioszkaAnimation 2s infinite;
           animation: matrioszkaAnimation 2s infinite;
   cursor: pointer;
-  position: absolute; }
+  position: absolute;
+  display: none; }
 
 .matrioszka__512 {
   z-index: 9; }
 
+@-webkit-keyframes matrioszka512 {
+  from {
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%); }
+  to {
+    -webkit-transform: translate(-150%, 50%);
+            transform: translate(-150%, 50%); } }
+
+@keyframes matrioszka512 {
+  from {
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%); }
+  to {
+    -webkit-transform: translate(-150%, 50%);
+            transform: translate(-150%, 50%); } }
+
+.matrioszka__512--activated {
+  -webkit-animation: matrioszka512 .3s linear forwards;
+          animation: matrioszka512 .3s linear forwards; }
+
 .matrioszka__128 {
   z-index: 8; }
+
+@-webkit-keyframes matrioszka128 {
+  from {
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%); }
+  to {
+    -webkit-transform: translate(-150%, 50%);
+            transform: translate(-150%, 50%); } }
+
+@keyframes matrioszka128 {
+  from {
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%); }
+  to {
+    -webkit-transform: translate(-150%, 50%);
+            transform: translate(-150%, 50%); } }
+
+.matrioszka__128--activated {
+  -webkit-animation: matrioszka128 .3s linear forwards;
+          animation: matrioszka128 .3s linear forwards; }
 
 .matrioszka__96 {
   z-index: 7; }
