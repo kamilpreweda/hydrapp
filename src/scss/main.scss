@@ -157,4 +157,43 @@ body {
 .matrioszka {
   animation: matrioszkaAnimation 2s infinite;
   cursor: pointer;
+  position: absolute;
+  display: none;
+
+}
+
+.matrioszka__512 {
+  z-index: 9;
+}
+
+.matrioszka__128 {
+  z-index: 8;
+}
+
+.matrioszka__96 {
+  z-index: 7;
+}
+
+.matrioszka__72 {
+  z-index: 6;
+}
+
+.matrioszka__64 {
+  z-index: 5;
+}
+
+.matrioszka__48 {
+  z-index: 4;
+}
+
+.matrioszka__32 {
+  z-index: 3;
+}
+
+.matrioszka__24 {
+  z-index: 1;
+}
+
+.matrioszka__16 {
+  z-index: 0;
 }

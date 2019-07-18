@@ -1,6 +1,9 @@
 "use strict";
 
+import { NONAME } from "dns";
+
 // service worker registration - remove if you're not going to use it
+
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function () {
@@ -25,12 +28,13 @@ const body = document.body;
 const matrioszka = document.createElement('img');
 matrioszka.src = 'assets/img/matrioszka512.svg'
 const glass = document.querySelector('img');
+const matrioszki = document.querySelectorAll('.matrioszka');
 
-if (localStorage.getItem(new Date().toISOString().slice(0, 10)) == false) {
-  counter.innerHTML = 0;
+if (localStorage.getItem(key) == false) {
+  counter.innerHTML = '0';
   localStorage.setItem(key, counter.innerHTML);
 } else {
-  counter.innerHTML = localStorage.getItem(new Date().toISOString().slice(0, 10));
+  counter.innerHTML = localStorage.getItem(key);
 }
 
 addButton.addEventListener('click', () => {
@@ -65,16 +69,20 @@ korsan.addEventListener('click', () => {
     korsan.style.background = 'black';
     body.appendChild(matrioszka);
     matrioszka.classList.add('matrioszka');
+    matrioszka.classList.add('matrioszka__512');
+    matrioszka.classList.add('matrioszka__512--js');
+    matrioszki.style.display = 'block';
   }
   else if (korsan.innerHTML === 'Powrót') {
     korsan.innerHTML = 'Znajdź Korsana'
     korsan.style.opacity = .1;
     korsan.style.background = '#3767AD';
     body.removeChild(matrioszka);
+    matrioszki.style.display = 'none';
   }
 
 })
 
 matrioszka.addEventListener('click', () => {
-  
+
 })
