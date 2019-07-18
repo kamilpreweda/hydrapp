@@ -4,6 +4,7 @@ import { NONAME } from "dns";
 
 // service worker registration - remove if you're not going to use it
 
+console.log('hello');
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function () {
@@ -28,7 +29,14 @@ const body = document.body;
 const matrioszka = document.createElement('img');
 matrioszka.src = 'assets/img/matrioszka512.svg'
 const glass = document.querySelector('img');
-const matrioszki = document.querySelectorAll('.matrioszka');
+const matrioszka128 = document.querySelector('.matrioszka__128--js');
+const matrioszka96 = document.querySelector('.matrioszka__96--js');
+const matrioszka72 = document.querySelector('.matrioszka__72--js');
+const matrioszka64 = document.querySelector('.matrioszka__64--js');
+const matrioszka48 = document.querySelector('.matrioszka__48--js');
+const matrioszka32 = document.querySelector('.matrioszka__32--js');
+const matrioszka24 = document.querySelector('.matrioszka__24--js');
+const matrioszka16 = document.querySelector('.matrioszka__16--js');
 
 if (localStorage.getItem(key) == false) {
   counter.innerHTML = '0';
@@ -71,18 +79,26 @@ korsan.addEventListener('click', () => {
     matrioszka.classList.add('matrioszka');
     matrioszka.classList.add('matrioszka__512');
     matrioszka.classList.add('matrioszka__512--js');
-    matrioszki.style.display = 'block';
+    // matrioszki.style.display = 'block';
   }
   else if (korsan.innerHTML === 'Powrót') {
     korsan.innerHTML = 'Znajdź Korsana'
     korsan.style.opacity = .1;
     korsan.style.background = '#3767AD';
     body.removeChild(matrioszka);
-    matrioszki.style.display = 'none';
+    // matrioszki.style.display = 'none';
   }
-
 })
 
 matrioszka.addEventListener('click', () => {
-
+  console.log('klik');
+  matrioszka.classList.add('matrioszka__512--activated');
+  matrioszka128.classList.add('matrioszka__128--activated');
+  matrioszka96.classList.add('matrioszka__96--activated');
+  matrioszka72.classList.add('matrioszka__72--activated');
+  matrioszka64.classList.add('matrioszka__64--activated');
+  matrioszka48.classList.add('matrioszka__48--activated');
+  matrioszka32.classList.add('matrioszka__32--activated');
+  matrioszka24.classList.add('matrioszka__24--activated');
+  matrioszka16.classList.add('matrioszka__16--activated');
 })
