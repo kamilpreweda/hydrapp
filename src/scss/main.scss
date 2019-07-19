@@ -190,16 +190,32 @@ body {
   }
 
   to {
-    transform: translate(-150%, 50%);
+    transform: translate(-400%, 333%);
   }
 }
 
 .matrioszka__128--activated {
   animation: matrioszka128 .3s linear forwards;
+  animation-delay: .3s;
 }
 
 .matrioszka__96 {
   z-index: 7;
+}
+
+@keyframes matrioszka96 {
+  from {
+    transform: translate(0%, 0%);
+  }
+
+  to {
+    transform: translate(-400%, 460%);
+  }
+}
+
+.matrioszka__96--activated {
+  animation: matrioszka96 .3s linear forwards;
+  animation-delay: .6s;
 }
 
 
@@ -207,22 +223,112 @@ body {
   z-index: 6;
 }
 
+@keyframes matrioszka72 {
+  from {
+    transform: translate(0%, 0%);
+  }
+
+  to {
+    transform: translate(-400%, 630%);
+  }
+}
+
+.matrioszka__72--activated {
+  animation: matrioszka72 .3s linear forwards;
+  animation-delay: .9s;
+}
+
 .matrioszka__64 {
   z-index: 5;
+}
+
+@keyframes matrioszka64 {
+  from {
+    transform: translate(0%, 0%);
+  }
+
+  to {
+    transform: translate(-350%, 710%);
+  }
+}
+
+.matrioszka__64--activated {
+  animation: matrioszka64 .3s linear forwards;
+  animation-delay: 1.2s;
 }
 
 .matrioszka__48 {
   z-index: 4;
 }
 
+@keyframes matrioszka48 {
+  from {
+    transform: translate(0%, 0%);
+  }
+
+  to {
+    transform: translate(-350%, 960%);
+  }
+}
+
+.matrioszka__48--activated {
+  animation: matrioszka48 .3s linear forwards;
+  animation-delay: 1.5s;
+}
+
 .matrioszka__32 {
   z-index: 3;
+}
+
+@keyframes matrioszka32 {
+  from {
+    transform: translate(0%, 0%);
+  }
+
+  to {
+    transform: translate(-400%, 1450%);
+  }
+}
+
+.matrioszka__32--activated {
+  animation: matrioszka32 .3s linear forwards;
+  animation-delay: 1.8s;
 }
 
 .matrioszka__24 {
   z-index: 1;
 }
 
+@keyframes matrioszka24 {
+  from {
+    transform: translate(0%, 0%);
+  }
+
+  to {
+    transform: translate(-400%, 1950%);
+  }
+}
+
+.matrioszka__24--activated {
+  animation: matrioszka24 .3s linear forwards;
+  animation-delay: 2.1s;
+}
+
 .matrioszka__16 {
   z-index: 0;
+}
+
+@keyframes matrioszka16 {
+  from {
+    transform: translate(0%, 0%);
+  }
+
+  to {
+    transform: translate(-400%, 2940%);
+  }
+}
+
+.matrioszka__16--activated {
+  animation: matrioszka16 .3s linear forwards;
+  animation-delay: 2.4s;
 }

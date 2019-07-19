@@ -37,7 +37,7 @@ const matrioszka24 = document.querySelector('.matrioszka__24--js');
 const matrioszka16 = document.querySelector('.matrioszka__16--js');
 let matrioszki = [...document.querySelectorAll('.matrioszka')];
 
-if (localStorage.getItem(key) == false) {
+if (localStorage.getItem(key) === null) {
   counter.innerHTML = '0';
   localStorage.setItem(key, counter.innerHTML);
 } else {
