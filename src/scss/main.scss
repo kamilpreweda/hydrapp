@@ -339,3 +339,52 @@ body {
     animation-delay: 2.4s;
   }
 }
+
+@keyframes bubble {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.speech-bubble {
+  position: relative;
+  background: #ffffff;
+  border-radius: .4em;
+  padding: 5px;
+  transform: translate(200%, 1900%);
+  animation: bubble 3s forwards;
+}
+
+.speech-bubble:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 23px solid transparent;
+  border-top-color: #ffffff;
+  border-bottom: 0;
+  border-left: 0;
+  margin-left: -11.5px;
+  margin-bottom: -23px;
+}
+
+@keyframes falcon {
+  from {
+    transform: translate(-500%, -200%);
+  }
+
+  to {
+    transform: translate(0, 0%);
+  }
+}
+
+.falcon {
+  animation: falcon 1s ease-out forwards;
+  // transform: translate(-500%, -200%)
+}

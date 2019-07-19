@@ -98,6 +98,7 @@ korsan.addEventListener('click', () => {
     matrioszka24.classList.remove('matrioszka__24--activated');
     matrioszka16.classList.remove('matrioszka__16--activated');
     body.removeChild(matrioszka);
+    body.removeChild(falcon);
     for (let item of matrioszki) {
       item.style.display = 'none';
     }
@@ -144,6 +145,14 @@ matrioszka24.addEventListener('click', () => {
   matrioszka24.style.display = 'none';
 })
 
+const bubble = document.createElement('div');
+bubble.textContent = "Call Han Solo!";
+bubble.setAttribute('class', 'speech-bubble');
+const falcon = document.createElement('img');
+falcon.src = 'assets/img/falcon.svg'
+
 matrioszka16.addEventListener('click', () => {
-  matrioszka16.style.display = 'none';
+  document.body.appendChild(bubble);
+  document.body.appendChild(falcon);
+  falcon.setAttribute('class', 'falcon falcon--js');
 })
