@@ -37,6 +37,7 @@ const matrioszka24 = document.querySelector('.matrioszka__24--js');
 const matrioszka16 = document.querySelector('.matrioszka__16--js');
 let matrioszki = [...document.querySelectorAll('.matrioszka')];
 
+
 if (localStorage.getItem(key) === null) {
   counter.innerHTML = '0';
   localStorage.setItem(key, counter.innerHTML);
@@ -80,7 +81,6 @@ korsan.addEventListener('click', () => {
     matrioszka.classList.add('matrioszka__512');
     matrioszka.classList.add('matrioszka__512--js');
     for (let item of matrioszki) {
-      console.log(item);
       item.style.display = 'block';
     }
   }
@@ -114,4 +114,36 @@ matrioszka.addEventListener('click', () => {
   matrioszka32.classList.add('matrioszka__32--activated');
   matrioszka24.classList.add('matrioszka__24--activated');
   matrioszka16.classList.add('matrioszka__16--activated');
+})
+
+matrioszka128.addEventListener('click', () => {
+  matrioszka128.style.display = 'none';
+})
+
+matrioszka96.addEventListener('click', () => {
+  matrioszka96.style.display = 'none';
+})
+
+matrioszka72.addEventListener('click', () => {
+  matrioszka72.style.display = 'none';
+})
+
+matrioszka64.addEventListener('click', () => {
+  matrioszka64.style.display = 'none';
+})
+
+matrioszka48.addEventListener('click', () => {
+  matrioszka48.style.display = 'none';
+})
+
+matrioszka32.addEventListener('click', () => {
+  matrioszka32.style.display = 'none';
+})
+
+matrioszka24.addEventListener('click', () => {
+  matrioszka24.style.display = 'none';
+})
+
+matrioszka16.addEventListener('click', () => {
+  matrioszka16.style.display = 'none';
 })
