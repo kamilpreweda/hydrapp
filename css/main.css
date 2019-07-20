@@ -471,18 +471,6 @@ body {
   .remove__hidden {
     display: none; }
 
-.korsan {
-  position: fixed;
-  bottom: 10px;
-  border: none;
-  background-color: #3767AD;
-  color: white;
-  opacity: .1;
-  cursor: pointer;
-  -webkit-transition: 2s;
-  -o-transition: 2s;
-  transition: 2s; }
-
 .matrioszka {
   -webkit-animation: matrioszkaAnimation 2s infinite;
           animation: matrioszkaAnimation 2s infinite;
@@ -490,71 +478,262 @@ body {
   position: absolute;
   display: none; }
 
-.matrioszka__512 {
-  z-index: 9; }
+.korsan {
+  display: none; }
 
-@-webkit-keyframes matrioszka512 {
+@media (min-width: 2000px) and (min-height: 1500px) {
+  .korsan {
+    display: block;
+    position: fixed;
+    bottom: 10px;
+    border: none;
+    background-color: #3767AD;
+    color: white;
+    opacity: .1;
+    cursor: pointer;
+    -webkit-transition: 2s;
+    -o-transition: 2s;
+    transition: 2s; }
+  .matrioszka__512 {
+    z-index: 9; }
+  @-webkit-keyframes matrioszka512 {
+    from {
+      opacity: 1; }
+    to {
+      opacity: 0; } }
+  @keyframes matrioszka512 {
+    from {
+      opacity: 1; }
+    to {
+      opacity: 0; } }
+  .matrioszka__512--activated {
+    -webkit-animation: matrioszka512 .3s linear forwards;
+            animation: matrioszka512 .3s linear forwards; }
+  .matrioszka__128 {
+    z-index: 8; }
+  @-webkit-keyframes matrioszka128 {
+    from {
+      -webkit-transform: translate(0%, 0%);
+              transform: translate(0%, 0%); }
+    to {
+      -webkit-transform: translate(-100%, 333%);
+              transform: translate(-100%, 333%); } }
+  @keyframes matrioszka128 {
+    from {
+      -webkit-transform: translate(0%, 0%);
+              transform: translate(0%, 0%); }
+    to {
+      -webkit-transform: translate(-100%, 333%);
+              transform: translate(-100%, 333%); } }
+  .matrioszka__128--activated {
+    -webkit-animation: matrioszka128 .3s linear forwards;
+            animation: matrioszka128 .3s linear forwards;
+    -webkit-animation-delay: .3s;
+            animation-delay: .3s; }
+  .matrioszka__96 {
+    z-index: 7; }
+  @-webkit-keyframes matrioszka96 {
+    from {
+      -webkit-transform: translate(0%, 0%);
+              transform: translate(0%, 0%); }
+    to {
+      -webkit-transform: translate(-50%, 460%);
+              transform: translate(-50%, 460%); } }
+  @keyframes matrioszka96 {
+    from {
+      -webkit-transform: translate(0%, 0%);
+              transform: translate(0%, 0%); }
+    to {
+      -webkit-transform: translate(-50%, 460%);
+              transform: translate(-50%, 460%); } }
+  .matrioszka__96--activated {
+    -webkit-animation: matrioszka96 .3s linear forwards;
+            animation: matrioszka96 .3s linear forwards;
+    -webkit-animation-delay: .6s;
+            animation-delay: .6s; }
+  .matrioszka__72 {
+    z-index: 6; }
+  @-webkit-keyframes matrioszka72 {
+    from {
+      -webkit-transform: translate(0%, 0%);
+              transform: translate(0%, 0%); }
+    to {
+      -webkit-transform: translate(25%, 630%);
+              transform: translate(25%, 630%); } }
+  @keyframes matrioszka72 {
+    from {
+      -webkit-transform: translate(0%, 0%);
+              transform: translate(0%, 0%); }
+    to {
+      -webkit-transform: translate(25%, 630%);
+              transform: translate(25%, 630%); } }
+  .matrioszka__72--activated {
+    -webkit-animation: matrioszka72 .3s linear forwards;
+            animation: matrioszka72 .3s linear forwards;
+    -webkit-animation-delay: .9s;
+            animation-delay: .9s; }
+  .matrioszka__64 {
+    z-index: 5; }
+  @-webkit-keyframes matrioszka64 {
+    from {
+      -webkit-transform: translate(0%, 0%);
+              transform: translate(0%, 0%); }
+    to {
+      -webkit-transform: translate(100%, 715%);
+              transform: translate(100%, 715%); } }
+  @keyframes matrioszka64 {
+    from {
+      -webkit-transform: translate(0%, 0%);
+              transform: translate(0%, 0%); }
+    to {
+      -webkit-transform: translate(100%, 715%);
+              transform: translate(100%, 715%); } }
+  .matrioszka__64--activated {
+    -webkit-animation: matrioszka64 .3s linear forwards;
+            animation: matrioszka64 .3s linear forwards;
+    -webkit-animation-delay: 1.2s;
+            animation-delay: 1.2s; }
+  .matrioszka__48 {
+    z-index: 4; }
+  @-webkit-keyframes matrioszka48 {
+    from {
+      -webkit-transform: translate(0%, 0%);
+              transform: translate(0%, 0%); }
+    to {
+      -webkit-transform: translate(220%, 970%);
+              transform: translate(220%, 970%); } }
+  @keyframes matrioszka48 {
+    from {
+      -webkit-transform: translate(0%, 0%);
+              transform: translate(0%, 0%); }
+    to {
+      -webkit-transform: translate(220%, 970%);
+              transform: translate(220%, 970%); } }
+  .matrioszka__48--activated {
+    -webkit-animation: matrioszka48 .3s linear forwards;
+            animation: matrioszka48 .3s linear forwards;
+    -webkit-animation-delay: 1.5s;
+            animation-delay: 1.5s; }
+  .matrioszka__32 {
+    z-index: 3; }
+  @-webkit-keyframes matrioszka32 {
+    from {
+      -webkit-transform: translate(0%, 0%);
+              transform: translate(0%, 0%); }
+    to {
+      -webkit-transform: translate(450%, 1475%);
+              transform: translate(450%, 1475%); } }
+  @keyframes matrioszka32 {
+    from {
+      -webkit-transform: translate(0%, 0%);
+              transform: translate(0%, 0%); }
+    to {
+      -webkit-transform: translate(450%, 1475%);
+              transform: translate(450%, 1475%); } }
+  .matrioszka__32--activated {
+    -webkit-animation: matrioszka32 .3s linear forwards;
+            animation: matrioszka32 .3s linear forwards;
+    -webkit-animation-delay: 1.8s;
+            animation-delay: 1.8s; }
+  .matrioszka__24 {
+    z-index: 1; }
+  @-webkit-keyframes matrioszka24 {
+    from {
+      -webkit-transform: translate(0%, 0%);
+              transform: translate(0%, 0%); }
+    to {
+      -webkit-transform: translate(750%, 1975%);
+              transform: translate(750%, 1975%); } }
+  @keyframes matrioszka24 {
+    from {
+      -webkit-transform: translate(0%, 0%);
+              transform: translate(0%, 0%); }
+    to {
+      -webkit-transform: translate(750%, 1975%);
+              transform: translate(750%, 1975%); } }
+  .matrioszka__24--activated {
+    -webkit-animation: matrioszka24 .3s linear forwards;
+            animation: matrioszka24 .3s linear forwards;
+    -webkit-animation-delay: 2.1s;
+            animation-delay: 2.1s; }
+  .matrioszka__16 {
+    z-index: 0; }
+  @-webkit-keyframes matrioszka16 {
+    from {
+      -webkit-transform: translate(0%, 0%);
+              transform: translate(0%, 0%); }
+    to {
+      -webkit-transform: translate(1300%, 2990%);
+              transform: translate(1300%, 2990%); } }
+  @keyframes matrioszka16 {
+    from {
+      -webkit-transform: translate(0%, 0%);
+              transform: translate(0%, 0%); }
+    to {
+      -webkit-transform: translate(1300%, 2990%);
+              transform: translate(1300%, 2990%); } }
+  .matrioszka__16--activated {
+    -webkit-animation: matrioszka16 .3s linear forwards;
+            animation: matrioszka16 .3s linear forwards;
+    -webkit-animation-delay: 2.4s;
+            animation-delay: 2.4s; } }
+
+@-webkit-keyframes bubble {
   from {
-    -webkit-transform: translate(0%, 0%);
-            transform: translate(0%, 0%); }
+    opacity: 1; }
   to {
-    -webkit-transform: translate(-150%, 50%);
-            transform: translate(-150%, 50%); } }
+    opacity: 0; } }
 
-@keyframes matrioszka512 {
+@keyframes bubble {
   from {
-    -webkit-transform: translate(0%, 0%);
-            transform: translate(0%, 0%); }
+    opacity: 1; }
   to {
-    -webkit-transform: translate(-150%, 50%);
-            transform: translate(-150%, 50%); } }
+    opacity: 0; } }
 
-.matrioszka__512--activated {
-  -webkit-animation: matrioszka512 .3s linear forwards;
-          animation: matrioszka512 .3s linear forwards; }
+.speech-bubble {
+  position: relative;
+  background: #ffffff;
+  border-radius: .4em;
+  padding: 5px;
+  -webkit-transform: translate(200%, 1500%);
+      -ms-transform: translate(200%, 1500%);
+          transform: translate(200%, 1500%);
+  -webkit-animation: bubble 3s forwards;
+          animation: bubble 3s forwards; }
 
-.matrioszka__128 {
-  z-index: 8; }
+.speech-bubble:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 23px solid transparent;
+  border-top-color: #ffffff;
+  border-bottom: 0;
+  border-left: 0;
+  margin-left: -11.5px;
+  margin-bottom: -23px; }
 
-@-webkit-keyframes matrioszka128 {
+@-webkit-keyframes falcon {
   from {
-    -webkit-transform: translate(0%, 0%);
-            transform: translate(0%, 0%); }
+    -webkit-transform: translate(-500%, -200%);
+            transform: translate(-500%, -200%); }
   to {
-    -webkit-transform: translate(-150%, 50%);
-            transform: translate(-150%, 50%); } }
+    -webkit-transform: translate(0, 0%);
+            transform: translate(0, 0%); } }
 
-@keyframes matrioszka128 {
+@keyframes falcon {
   from {
-    -webkit-transform: translate(0%, 0%);
-            transform: translate(0%, 0%); }
+    -webkit-transform: translate(-500%, -200%);
+            transform: translate(-500%, -200%); }
   to {
-    -webkit-transform: translate(-150%, 50%);
-            transform: translate(-150%, 50%); } }
+    -webkit-transform: translate(0, 0%);
+            transform: translate(0, 0%); } }
 
-.matrioszka__128--activated {
-  -webkit-animation: matrioszka128 .3s linear forwards;
-          animation: matrioszka128 .3s linear forwards; }
-
-.matrioszka__96 {
-  z-index: 7; }
-
-.matrioszka__72 {
-  z-index: 6; }
-
-.matrioszka__64 {
-  z-index: 5; }
-
-.matrioszka__48 {
-  z-index: 4; }
-
-.matrioszka__32 {
-  z-index: 3; }
-
-.matrioszka__24 {
-  z-index: 1; }
-
-.matrioszka__16 {
-  z-index: 0; }
+.falcon {
+  position: absolute;
+  -webkit-animation: falcon 1s ease-out forwards;
+          animation: falcon 1s ease-out forwards; }
 
 /*# sourceMappingURL=main.css.map */
