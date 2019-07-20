@@ -154,7 +154,7 @@ body {
   display: none;
 }
 
-@media(min-width: 1920px) and (min-height: 1080px) {
+@media(min-width: 2000px) and (min-height: 1500px) {
 
   .korsan {
     display: block;
@@ -355,7 +355,7 @@ body {
   background: #ffffff;
   border-radius: .4em;
   padding: 5px;
-  transform: translate(200%, 1900%);
+  transform: translate(200%, 1500%);
   animation: bubble 3s forwards;
 }
 
@@ -385,6 +385,6 @@ body {
 }
 
 .falcon {
+  position: absolute;
   animation: falcon 1s ease-out forwards;
-  // transform: translate(-500%, -200%)
 }

@@ -99,6 +99,7 @@ korsan.addEventListener('click', () => {
     matrioszka16.classList.remove('matrioszka__16--activated');
     body.removeChild(matrioszka);
     body.removeChild(falcon);
+    body.removeChild(bubble);
     for (let item of matrioszki) {
       item.style.display = 'none';
     }
